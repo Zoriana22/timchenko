@@ -133,6 +133,7 @@ html {
 }
 /*main*/
 .menu {
+  display: inline;
     width: 300px;
 }
 /*details > summary:first-of-type {
