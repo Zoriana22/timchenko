@@ -186,6 +186,10 @@ html {
   background-image: url(img/free-icon-download-9797374.png);
   background-size: contain;
 }
+.download_btn {
+  width: 40px;
+  height: 40px;
+}
 .GSHO {
   height: 200px;
   background-image: url(img/about_us_pic.jpg);
