@@ -185,10 +185,15 @@ html {
   height: 40px;
   color: transparent;
 }
-.GSHO {
-  height: 200px;
+.GSHO::after {
+  content: "";
+  width: 400px;
+  height: 400px;
+	display: inline-block;
   background-image: url(img/about_us_pic.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
+  margin-left: 300px;
 }
 details > summary {
   max-width: 1920px;
