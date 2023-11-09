@@ -175,6 +175,22 @@ html {
   max-width: 1920px;
   margin-bottom: 70px;
 }
+.catalog_and_btn {
+  display: flex;
+  flex-direction: row;
+  align-items: normal;
+}
+.download-catalog {
+  width: 40px;
+  height: 40px;
+  background-image: url(img/free-icon-download-9797374.png);
+  background-size: contain;
+}
+.GSHO {
+  height: 200px;
+  background-image: url(img/about_us_pic.jpg);
+  background-size: cover;
+}
 details > summary {
   max-width: 1920px;
   padding: 5px;
@@ -215,15 +231,18 @@ content: "-";
 .model-list {
   display: flex;
   flex-direction: column;
-  padding-left: 60px;
+  padding-left: 90px;
 }
 .model-page {
-  padding-left: 35px;
   color: #201f1f;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 300;
   font-size: 20px;
   line-height: 24px;
+  transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+.model-page:hover {
+  border-bottom: 1px solid #ff6a00;
 }
 
 
