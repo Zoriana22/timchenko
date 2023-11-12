@@ -192,4 +192,15 @@
     .persons__tel {
         width: 400px;
     }
+    .footer-right__request {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        max-width: 400px;
+    }
+    .checkbox__text {
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 15px;
+    }
 }
