@@ -1,0 +1,195 @@
+@media (max-width: 3840px) {
+    .about__us-for_media_1250 {
+        display: none;
+    }
+}
+
+@media (max-width: 1700px) {
+    .header__logo {
+        margin-right: 200px;
+    }
+    .about__us {
+        display: none;
+    }
+    .about__us-for_media_1250 {
+        display: inline-block;
+        width: 100%;
+        height: 650px;
+    }
+    .about_img {
+        width: 480px;
+        height: 580px;
+        float: right;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .about__us-for_media_1250 {
+        min-height: 730px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .nav__item:not(:last-child) {
+        margin-right: 45px;
+    }
+    .about_background_img {
+        width: 500px;
+        min-height: 750px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .about__us-for_media_1250 {
+        min-height: 660px;
+    }
+    .about_img {
+        width: 350px;
+        height: 450px;
+    }
+
+    .header__nav {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 350px;
+        height: 400px;
+        z-index: 1000;
+        box-shadow: inset 10px 10px 20px #888;
+        background-color: #fff;
+        overflow-y: auto;
+        visibility:hidden;
+        transform: translateX(-120%);
+        transition: visibility 0.3s ease-in-out,
+       }
+      
+       .header__nav .nav__list {
+        flex-direction: column;
+       }
+      
+       .header__nav .nav__item {
+        margin-bottom: 30px;
+        margin-right: auto;
+        justify-content: flex-start;
+       }
+      
+       .header__nav .nav__link {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+       }
+      
+       .header__nav--active {
+        visibility: visible;
+        transform: none;
+       }
+      
+       .header__burger {
+        z-index: 2000;
+        margin-left: auto;
+        margin-right: 50px;
+       }
+      
+       .burger--active
+       .burger__line:nth-child(2) {
+        opacity: 0;
+       }
+      
+       .burger--active
+       .burger__line:first-child {
+        top: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        transform-origin: center;
+        transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out;
+       }
+      
+       .burger--active
+       .burger__line:last-child {
+        bottom: auto;
+        top: 50%;
+        transform: translateX(-50%) rotate(-45deg);
+        transform-origin: center;
+        transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out;
+       }
+      
+      .burger {
+       position: relative;
+       display: block;
+       width: 60px;
+       height: 45px;
+       margin-top: -50px;
+       color: var(--black);
+       outline: 2px solid transparent;
+       outline-offset: 1px;
+       transition: outline-color /*0.3s ease-in-out*/;
+      }
+      
+      .burger:hover {
+       outline-color: #ff6a00;
+      }
+      
+      .burger__line {
+       position: absolute;
+       /*left: 50%;*/
+       width: 50px;
+       height: 2px;
+       border-radius: inherit;
+       background-color: currentColor;
+       transform: translateX(-50%);
+      }
+      
+      .stop-scroll {
+       overflow: hidden;
+      }
+      
+      .burger__line:nth-child(1) {
+       top: 13px;
+      }
+      .burger__line:nth-child(3) {
+       bottom: 13px;
+      }
+      .burger__line:nth-child(2) {
+       top: 50%;
+       transform: translateX(-50%) translateY(-50%);
+      }
+      
+      .burger:active {
+       outline: none;
+      }
+      
+      .burger:active .burger__line:nth-child(1) {
+       width: 35px;
+       background-color: #ff6a00;
+      }
+      .burger:active .burger__line:nth-child(2) {
+       width: 27px;
+       left: 63%;
+       background-color: var(--beige-third);
+      }
+      .burger:active .burger__line:nth-child(3) {
+       width: 17px;
+       left: 70%;
+       background-color:  #ff6a00;
+       
+      }
+
+}
+
+
+@media (max-width: 1250px) {
+    .nav__item:not(:last-child) {
+        margin-right: 45px;
+    }
+    .about__us-for_media_1250 {
+        min-height: 800px;
+    }
+    .about_img {
+        width: 300px;
+        height: 400px;
+    }
+    .persons__name, .persons__email, 
+    .persons__tel {
+        width: 400px;
+    }
+}

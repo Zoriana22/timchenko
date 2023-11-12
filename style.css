@@ -84,7 +84,7 @@ html {
   align-items: center;
   max-width: 1920px;
   height: 160px;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
   box-shadow: 0px 5px 40px rgba(89, 88, 88, 0.5);
   border-radius: 0px 0px 50px 50px;
 }
@@ -143,6 +143,7 @@ html {
   margin: 0 auto;
 }
 /*main*/
+
 .about__us {
   display: flex;
   flex-direction: row;
@@ -498,4 +499,59 @@ content: "-";
     line-height: 32px;
     color: var(--grey-light);
   }
+
+/*lebedka1*/
+.catalog-item {
+  padding-left: 80px;
+}
+.back-to-catalog {
+  width: 200px;
+  padding: 17px 17px;
+  background-image: linear-gradient(to right, #ff6a00, #000);;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.foto-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.foto1 {
+  width: 400px;
+  height: 400px;
+  background-image: url(img/about_us_pic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.catalogtitle__name {
+  margin: 0;
+  margin: 70px 0px 100px 150px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+}
+.using-distrikt,
+.complektation,
+.tech-data {
+  margin: 0;
+  margin: 70px 0px 30px 50px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+}
+.distrikt-descr,
+.complektation-descr,
+.tech-data-descr {
+  margin: 0;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 23px;
+}
+.tech-data-descr {
+  margin-bottom: 70px;
+}
+
+
   
