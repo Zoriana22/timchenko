@@ -13,6 +13,8 @@
     <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="./normalize.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="tim-media.css">
+    <link defer src="index.js">
     <!--<script src="//unpkg.com/navigo"></script>-->
     <!--<script type="module" src="js/main.js"></script>-->
     <title>Timchenko</title>
@@ -41,6 +43,15 @@
                                 class="nav-text">Контакты</span></a></li>
                 </ul>
             </div>
+
+            <div class="header__burger">
+                <button class="btn-reset burger">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
+            </div>
+
         </div>
     </header>
     <main class="catalog-item">
@@ -108,9 +119,9 @@
 
 
             <div class="footer-right">
-                <h2 class="section-title footer__title">
+                <h2 class="footer-right__title">
                     Возникли трудности?<br />Заполните форму и с вами свяжутся для
-                    оказания помощи
+                    консультации
                 </h2>
                 <form id="contact-form" method="post" class="form-request flex">
                     <label class="persons-data">
