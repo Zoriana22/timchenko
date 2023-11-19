@@ -1,550 +1,695 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="favicons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script defer src="./Inputmask-5.x/inputmask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init("eAD8gHX-oP0Fm_78D");
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
-  <link rel="manifest" href="favicons/site.webmanifest" />
-  <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5" />
-  <meta name="msapplication-TileColor" content="#da532c" />
-  <meta name="theme-color" content="#ffffff" />
-  <link rel="stylesheet" href="./normalize.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  <script defer src="./Inputmask-5.x/inputmask.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function () {
-      // https://dashboard.emailjs.com/admin/account
-      emailjs.init("eAD8gHX-oP0Fm_78D");
-    })();
-  </script>
-  <script type="text/javascript">
-    window.onload = function () {
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
+            // these IDs from the previous steps
+            emailjs.sendForm("service_bseddub", "template_4hog4v6", this).then(
+              function () {},
+              function (error) {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="tim-media.css" />
+    <link defer src="index.js" />
+    <!--<script src="//unpkg.com/navigo"></script>-->
+    <!--<script type="module" src="js/main.js"></script>-->
+    <title>Timchenko</title>
+  </head>
 
-          // these IDs from the previous steps
-          emailjs.sendForm("service_bseddub", "template_4hog4v6", this).then(
-            function () { },
-            function (error) {
-              console.log("FAILED...", error);
-            }
-          );
-        });
-    };
-  </script>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="tim-media.css">
-  <link defer src="index.js">
-  <!--<script src="//unpkg.com/navigo"></script>-->
-  <!--<script type="module" src="js/main.js"></script>-->
-  <title>Timchenko</title>
-</head>
-
-<body>
-  <header>
-    <div class="header__box">
-
-      <a href="#" class="header__logo-link">
-        <div class="header__logo">
-          <div class="logo-img"></div>
-          <span class="logo-name">АВЕГА</span>
-        </div>
-      </a>
-
-      <div class="header__nav">
-        <ul class="nav__list list-reset">
-          <li class="nav__item"><a href="#О компании" target="_self" class="nav__link"><span class="nav-text">О
-                компании</span></a></li>
-          <li class="nav__item"><a href="#Деятельность" target="_self" class="nav__link"><span
-                class="nav-text">Деятельность</span></a></li>
-          <li class="nav__item"><a href="#Каталог" target="_self" class="nav__link"><span
-                class="nav-text">Каталог</span></a></li>
-          <li class="nav__item"><a href="#Контакты" target="_self" class="nav__link"><span
-                class="nav-text">Контакты</span></a></li>
-        </ul>
-      </div>
-
-      <div class="header__burger">
-        <button class="btn-reset burger">
-          <span class="burger__line"></span>
-          <span class="burger__line"></span>
-          <span class="burger__line"></span>
-        </button>
-      </div>
-
-    </div>
-
-  </header>
-
-  <main>
-    <div class="about__us">
-      <div class="about_text">
-        <h2 class="title__name">О компании</h2>
-        <p class="about__us-descr">
-          Группа компаний ООО «Авега» имеет широкий спектр предоставляемых услуг на рынке России и
-          стран СНГ. Одно из направлений является поставка на рынок России и ближнего зарубежья оборудования
-          для угольной и горнорудной промышленности с производственных объединений и заводов стран СНГ и
-          России с 2005 года. Специализация на поставке широкого спектра горно-шахтного и промышленного
-          оборудования, комплектующих и запасных частей к нему выбрана была не случайно, так как компания
-          располагает высококвалифицированным инженерным персоналом, имеющим большой опыт работы в
-          горной промышленности, осуществляющим технические консультации, грамотную комплектацию и
-          поставку необходимого Вам промышленного оборудования.
-          Многочисленные партнёрские взаимоотношения с промышленными регионами России и ближнего
-          зарубежья, а также наличие европейских партнёрских отношений влияют на качество и скорость
-          исполнения поставленных задач. Профессиональные навыки нашего коллектива позволяют
-          своевременно поставлять оборудование и материалы согласно заявкам, что значительно сказывается на
-          повышении эффективности, производительности, безопасности труда и улучшается качество
-          производимой Вами продукции и минимизации сроков исполнения обязательств перед Вашими
-          партнёрами, что делает Ваш труд востребованным и конкурентоспособным. Наше предприятие
-          организует доставку поставляемой продукции на Ваше предприятие, в кратчайшие сроки.
-          На все поставляемое оборудование предоставляется гарантия 12 месяцев. Прямые дилерские
-          отношения и встречные поставки с заводами производителями позволяют нам обеспечивать наличие
-          большого ассортимента продукции на собственном складе и оптимальные цены на поставляемое
-          оборудование.
-          Мы стараемся создать для своих клиентов и партнёров максимально комфортные и благоприятные
-          условия сотрудничества.
-          Прочные профессиональные связи с заводами-изготовителями и предприятиями на территории
-          Российской Федерации, Украины и стран СНГ постоянно расширяемый спектр предлагаемого
-          оборудования и услуг.
-        </p>
-      </div>
-      <div class="about_background_img"></div>
-    </div>
-    <div class="about__us-for_media_1250">
-
-      <h2 class="title__name">О компании</h2>
-      <p class="about__us-descr">
-        <img class="about_img" src="img/about_us_pic.jpg" align="right" alt="shnek_img">
-        Группа компаний ООО «Авега» имеет широкий спектр предоставляемых услуг на рынке России и
-        стран СНГ. Одно из направлений является поставка на рынок России и ближнего зарубежья оборудования
-        для угольной и горнорудной промышленности с производственных объединений и заводов стран СНГ и
-        России с 2005 года. Специализация на поставке широкого спектра горно-шахтного и промышленного
-        оборудования, комплектующих и запасных частей к нему выбрана была не случайно, так как компания
-        располагает высококвалифицированным инженерным персоналом, имеющим большой опыт работы в
-        горной промышленности, осуществляющим технические консультации, грамотную комплектацию и
-        поставку необходимого Вам промышленного оборудования.
-        Многочисленные партнёрские взаимоотношения с промышленными регионами России и ближнего
-        зарубежья, а также наличие европейских партнёрских отношений влияют на качество и скорость
-        исполнения поставленных задач. Профессиональные навыки нашего коллектива позволяют
-        своевременно поставлять оборудование и материалы согласно заявкам, что значительно сказывается на
-        повышении эффективности, производительности, безопасности труда и улучшается качество
-        производимой Вами продукции и минимизации сроков исполнения обязательств перед Вашими
-        партнёрами, что делает Ваш труд востребованным и конкурентоспособным. Наше предприятие
-        организует доставку поставляемой продукции на Ваше предприятие, в кратчайшие сроки.
-        На все поставляемое оборудование предоставляется гарантия 12 месяцев. Прямые дилерские
-        отношения и встречные поставки с заводами производителями позволяют нам обеспечивать наличие
-        большого ассортимента продукции на собственном складе и оптимальные цены на поставляемое
-        оборудование.
-        Мы стараемся создать для своих клиентов и партнёров максимально комфортные и благоприятные
-        условия сотрудничества.
-        Прочные профессиональные связи с заводами-изготовителями и предприятиями на территории
-        Российской Федерации, Украины и стран СНГ постоянно расширяемый спектр предлагаемого
-        оборудования и услуг.
-      </p>
-
-    </div>
-
-    <div class="catalog">
-      <div class="catalog_and_btn">
-        <!--<div class="catalog__title">-->
-        <h2 id="Каталог" class="title__name">Каталог оборудования и материалов</h2>
-        <!--</div>-->
-        <!--<div class="download-catalog">-->
-        <a href="https://disk.yandex.ru/i/P0QoVA7F1Ti-AQ" class="download_btn" download=""><img
-            src="img/free-icon-download-9797374.png" alt="">Скачать</a>
-        <!--</div>-->
-      </div>
-      <details>
-        <summary class="GSHO">Горно-шахтное оборудование</summary>
-        <details>
-          <summary class="sub-charter">Лебёдĸи</summary>
-          <div class="model-list">
-            <a href="GShO/lebedki/lebedka_1LVM.html"><span class="model-page">Лебедка вспомогательная
-                многофункциональная
-                1ЛВМ</span></a>
-            <a href="GShO/lebedki/lebedka_LVM-25.html"><span class="model-page">Лебедка вспомогательная маневровая
-                ЛВМ-25</span></a>
-            <a href="GShO/lebedki/lebedka_1LGKNM.html"><span class="model-page">Лебедка 1ЛГКНМ</span></a>
-
-            <a href="GShO/lebedki/lebedka_1LV-09.html"><span class="model-page">Лебедка 1ЛВ-09</span></a>
-            <a href="GShO/lebedki/lebedka_LPAP.html"><span class="model-page">Лебедка проходческая передвижная
-                ЛПЭП</span></a>
-            <a href="GShO/lebedki/lebedka_LV45.html"><span class="model-page">Лебедка ЛВ45</span></a>
-            <a href="GShO/lebedki/lebedka_LVU-25.html"><span class="model-page">Лебедка ЛВУ25</span></a>
-            <a href="GShO/lebedki/lebedka_manevr_LM-71bezmekhan.html"><span class="model-page">Лебедка маневровая ЛМ-71
-                без механизма</span></a>
-            <a href="GShO/lebedki/lebedka_manevr_LM-71mekhan.html"><span class="model-page">Лебедка маневровая ЛМ-71 с
-                механизмом</span></a>
-            <a href="GShO/lebedki/lebedka_manevr_LM-140bezmekhan.html"><span class="model-page">Лебедка маневровая
-                ЛМ-140 без механизма</span></a>
-            <a href="GShO/lebedki/lebedka_manevr_LM-140mekhan.html"><span class="model-page">Лебедка маневровая ЛМ-140 с
-                механизмом</span></a>
-            <a href="GShO/lebedki/lebedka_manevr_LM.html"><span class="model-page">Лебедка маневровая ЛМ</span></a>
-            <a href="GShO/lebedki/lebedka_montazhnaja_LMT-300.html"><span class="model-page">Лебедка монтажная
-                ЛМТ-300</span></a>
-            <a href="GShO/lebedki/lebedka_posadochnaja_LP-130.html"><span class="model-page">Лебедка посадочная
-                ЛП-130</span></a>
-            <a href="GShO/lebedki/lebedka_posadochnaja_LPK-10B.html"><span class="model-page">Лебедка посадочная
-                ЛПК-10Б</span></a>
-            <a href="GShO/lebedki/lebedka_posadochnaja_LPT-71.html"><span class="model-page">Лебедка посадочная
-                ЛПТ-71</span></a>
-            <a href="GShO/lebedki/lebedka_predohranit_3LP.html"><span class="model-page">Лебёдка предохранительная
-                ЗЛП</span></a>
-            <a href="GShO/lebedki/lebedka_shaht_mnogofunktion_LSHM.html"><span class="model-page">Лебедка шахтная
-                многофункциональная ЛШМ</span></a>
-            <a href="GShO/lebedki/lebedka_shaht_pnevmat_LP.html"><span class="model-page">Лебедка шахтная пневматическая
-                ЛП</span></a>
-            <a href="GShO/lebedki/lebedka_shaht_vspomogat_1LShW-01.html"><span class="model-page">Лебедка шахтная
-                вспомогательная 1ЛШВ-01</span></a>
-            <a href="GShO/lebedki/lebedka_shaht_vspomogat_LSHW-25U.html"><span class="model-page">Лебедка шахтная
-                вспомогательная ЛШВ-25У</span></a>
-            <a href="GShO/lebedki/lebedka_shaht_vspomogat_SHVA-2000.html"><span class="model-page">Лебедка шахтная
-                вспомогательная ШВА-2000</span></a>
-            <a href="GShO/lebedki/lebedka_shaht_vspomogat_SHVA-18000_0,25P.html"><span class="model-page">Лебедка
-                шахтная вспомогательная ШВА-18000×0,25П</span></a>
-            <a href="GShO/lebedki/lebedka_skrepper_2baraban_LSU.html"><span class="model-page">Лебедки скреперные
-                двухбарабанные ЛСУ</span></a>
-            <a href="GShO/lebedki/lebedka_skrepper_30LSU-02S.html"><span class="model-page">Лебедка скреперная
-                30ЛСУ-02С</span></a>
-            <a href="GShO/lebedki/lebedka_skrepper_55LSU-2S.html"><span class="model-page">Лебедка скреперная
-                55ЛСУ-2С</span></a>
-
+  <body>
+    <header>
+      <div class="header__box">
+        <a href="#" class="header__logo-link">
+          <div class="header__logo">
+            <div class="logo-img"></div>
+            <span class="logo-name">АВЕГА</span>
           </div>
-        </details>
-        <details>
-          <summary class="sub-charter">Вентиляторы</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-        <details>
-          <summary class="sub-charter">Насосы</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-      </details>
+        </a>
 
-      <details>
-        <summary>Запчасти к горно-шахтному оборудованию</summary>
-
-        <details>
-          <summary class="sub-charter">Запчасти к лебёдкам</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-        <details>
-          <summary class="sub-charter">Запчасти к вентиляторам</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-        <details>
-          <summary class="sub-charter">Запчасти к насосам</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-      </details>
-
-      <details>
-        <summary>Проходческое оборудование</summary>
-        <details>
-          <summary class="sub-charter">Анкероустановщики</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-        <details>
-          <summary class="sub-charter">Перфораторы</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-        <details>
-          <summary class="sub-charter">Буровое оборудование</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-        <details>
-          <summary class="sub-charter">Скребковые конвейера</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-        <details>
-          <summary class="sub-charter">Проходческие машины</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-      </details>
-
-      <details>
-        <summary>Запчасти к проходческому оборудованию</summary>
-        <details>
-          <summary class="sub-charter">Запчасти к анкероустановщикам</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-        <details>
-          <summary class="sub-charter">Запчасти к перфораторам</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-        <details>
-          <summary class="sub-charter">Запчасти к буровым машинам</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-        <details>
-          <summary class="sub-charter">Запчасти к скребковым конвейерам</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-        <details>
-          <summary class="sub-charter">Запчасти к проходческим машинам</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-      </details>
-
-      <details>
-        <summary>Материалы для ведения проходки</summary>
-        <details>
-          <summary class="sub-charter">Анкера</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-        <details>
-          <summary class="sub-charter">Канатные анкера</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-        <details>
-          <summary class="sub-charter">Полимерные ампулы</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-        <details>
-          <summary class="sub-charter">Минеральные ампулы</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-        <details>
-          <summary class="sub-charter">Резцы, коронки</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-      </details>
-
-      <details>
-        <summary>Крепления для горных выработок</summary>
-        <details>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-      </details>
-
-
-      <details>
-        <summary>Запчасти к обогатительному оборудованию</summary>
-        <details>
-          <summary class="sub-charter">Запчасти к дробилкам</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-      </details>
-
-      <details>
-        <summary>Осветительное оборудование для промышленных объектов</summary>
-
-        <details>
-          <summary class="sub-charter">Типы светильников</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-      </details>
-
-      <details>
-        <summary>Аутсорсинг закупочных работ</summary>
-        <details>
-          <summary class="sub-charter">Ваш отдел закупок заменим мы</summary>
-          <div class="model-list">
-            <a href=""><span class="model-page">test</span></a>
-          </div>
-        </details>
-      </details>
-
-    </div>
-  </main>
-  <footer>
-    <div class="footer__box">
-      <div class="footer-left">
-
-        <div id="Контакты" class="footer__logo">
-          <div class="footer-logo-img"></div>
-          <span class="footer-left-title">АВЕГА</span>
+        <div class="header__nav">
+          <ul class="nav__list list-reset">
+            <li class="nav__item">
+              <a href="#О компании" target="_self" class="nav__link"
+                ><span class="nav-text">О компании</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#Деятельность" target="_self" class="nav__link"
+                ><span class="nav-text">Деятельность</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#Каталог" target="_self" class="nav__link"
+                ><span class="nav-text">Каталог</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#Контакты" target="_self" class="nav__link"
+                ><span class="nav-text">Контакты</span></a
+              >
+            </li>
+          </ul>
         </div>
 
-        <div class="account__cont">
-          <h3 class="contacts__title">Контакты</h3>
-          <p class="account__info">
-            ООО "АВЕГА"" <br>ОГРН 1037739527077 <br>ИНН 7725038124<br>ФАКБ "РОССИЙСКИЙ КАПИТАЛ" (ПАО) РОСТОВСКИЙ<br>БИК
-            046015222<br>к/с 30101810200000000222 в ОТДЕЛЕНИИ
-            РОСТОВ-НА-ДОНУ<br>№ 40702810712020000248<br>346500, Ростовская область,<br> г. Шахты, пр-кт Пушкина, 29-А,
-            оф. 402<br>+7-000-123-45-67
+        <div class="header__burger">
+          <button class="btn-reset burger">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="about__us">
+        <div class="about_text">
+          <h2 class="title__name">О компании</h2>
+          <p class="about__us-descr">
+            Группа компаний ООО «Авега» имеет широкий спектр предоставляемых
+            услуг на рынке России и стран СНГ. Одно из направлений является
+            поставка на рынок России и ближнего зарубежья оборудования для
+            угольной и горнорудной промышленности с производственных объединений
+            и заводов стран СНГ и России с 2005 года. Специализация на поставке
+            широкого спектра горно-шахтного и промышленного оборудования,
+            комплектующих и запасных частей к нему выбрана была не случайно, так
+            как компания располагает высококвалифицированным инженерным
+            персоналом, имеющим большой опыт работы в горной промышленности,
+            осуществляющим технические консультации, грамотную комплектацию и
+            поставку необходимого Вам промышленного оборудования. Многочисленные
+            партнёрские взаимоотношения с промышленными регионами России и
+            ближнего зарубежья, а также наличие европейских партнёрских
+            отношений влияют на качество и скорость исполнения поставленных
+            задач. Профессиональные навыки нашего коллектива позволяют
+            своевременно поставлять оборудование и материалы согласно заявкам,
+            что значительно сказывается на повышении эффективности,
+            производительности, безопасности труда и улучшается качество
+            производимой Вами продукции и минимизации сроков исполнения
+            обязательств перед Вашими партнёрами, что делает Ваш труд
+            востребованным и конкурентоспособным. Наше предприятие организует
+            доставку поставляемой продукции на Ваше предприятие, в кратчайшие
+            сроки. На все поставляемое оборудование предоставляется гарантия 12
+            месяцев. Прямые дилерские отношения и встречные поставки с заводами
+            производителями позволяют нам обеспечивать наличие большого
+            ассортимента продукции на собственном складе и оптимальные цены на
+            поставляемое оборудование. Мы стараемся создать для своих клиентов и
+            партнёров максимально комфортные и благоприятные условия
+            сотрудничества. Прочные профессиональные связи с
+            заводами-изготовителями и предприятиями на территории Российской
+            Федерации, Украины и стран СНГ постоянно расширяемый спектр
+            предлагаемого оборудования и услуг.
           </p>
         </div>
-
+        <div class="about_background_img"></div>
+      </div>
+      <div class="about__us-for_media_1250">
+        <h2 class="title__name">О компании</h2>
+        <p class="about__us-descr">
+          <img
+            class="about_img"
+            src="img/about_us_pic.jpg"
+            align="right"
+            alt="shnek_img"
+          />
+          Группа компаний ООО «Авега» имеет широкий спектр предоставляемых услуг
+          на рынке России и стран СНГ. Одно из направлений является поставка на
+          рынок России и ближнего зарубежья оборудования для угольной и
+          горнорудной промышленности с производственных объединений и заводов
+          стран СНГ и России с 2005 года. Специализация на поставке широкого
+          спектра горно-шахтного и промышленного оборудования, комплектующих и
+          запасных частей к нему выбрана была не случайно, так как компания
+          располагает высококвалифицированным инженерным персоналом, имеющим
+          большой опыт работы в горной промышленности, осуществляющим
+          технические консультации, грамотную комплектацию и поставку
+          необходимого Вам промышленного оборудования. Многочисленные
+          партнёрские взаимоотношения с промышленными регионами России и
+          ближнего зарубежья, а также наличие европейских партнёрских отношений
+          влияют на качество и скорость исполнения поставленных задач.
+          Профессиональные навыки нашего коллектива позволяют своевременно
+          поставлять оборудование и материалы согласно заявкам, что значительно
+          сказывается на повышении эффективности, производительности,
+          безопасности труда и улучшается качество производимой Вами продукции и
+          минимизации сроков исполнения обязательств перед Вашими партнёрами,
+          что делает Ваш труд востребованным и конкурентоспособным. Наше
+          предприятие организует доставку поставляемой продукции на Ваше
+          предприятие, в кратчайшие сроки. На все поставляемое оборудование
+          предоставляется гарантия 12 месяцев. Прямые дилерские отношения и
+          встречные поставки с заводами производителями позволяют нам
+          обеспечивать наличие большого ассортимента продукции на собственном
+          складе и оптимальные цены на поставляемое оборудование. Мы стараемся
+          создать для своих клиентов и партнёров максимально комфортные и
+          благоприятные условия сотрудничества. Прочные профессиональные связи с
+          заводами-изготовителями и предприятиями на территории Российской
+          Федерации, Украины и стран СНГ постоянно расширяемый спектр
+          предлагаемого оборудования и услуг.
+        </p>
       </div>
 
-      <div class="footer-right">
-        <h2 class="footer-right__title">
-          Возникли трудности?<br />Заполните форму и с вами свяжутся для
-          консультации
-        </h2>
-        <form id="contact-form" method="post" class="form-request flex">
-          <label class="persons-data">
-            <!--<span class="visually-hidden">Фамилия, имя и отчество</span>-->
-            <input class="persons__name" type="text" name="user_name" data-validate-field="name"
-              data-validate-rules="name" placeholder="Ваше имя*" required />
-            <!--<span class="visually-hidden">Введите электронную почту</span>-->
-            <input class="persons__email" type="email" name="user_email" data-validate-field="email"
-              placeholder="Ваша почта*" required />
-            <!--<span class="visually-hidden">Введите номер телефона</span>-->
-            <input class="persons__tel" type="tel" name="contact_number" data-validate-field="tel"
-              data-validate-rules="phone" placeholder="Ваш телефон*" required />
-          </label>
-          <div class="footer-right__request">
-            <button type="submit" value="Send" aria-label="кнопка отправить данные" class="request__btn btn">
-              <span class="request-btn__text">Связаться с нами</span>
-            </button>
-            <label class="checkbox-place">
-              <span class="checkbox__text">Мы обрабатываем персональные данные посетителей
-                нашего сайта в соответствии с официальной политикой</span>
-            </label>
+      <div class="catalog">
+        <div class="catalog_and_btn">
+          <!--<div class="catalog__title">-->
+          <h2 id="Каталог" class="title__name">
+            Каталог оборудования и материалов
+          </h2>
+          <!--</div>-->
+          <!--<div class="download-catalog">-->
+          <a
+            href="https://disk.yandex.ru/i/P0QoVA7F1Ti-AQ"
+            class="download_btn"
+            download=""
+            ><img src="img/free-icon-download-9797374.png" alt="" />Скачать</a
+          >
+          <!--</div>-->
+        </div>
+        <details data-id="GSHO">
+          <summary class="GSHO">Горно-шахтное оборудование</summary>
+          <details data-id="winch">
+            <summary class="sub-charter">Лебёдĸи</summary>
+            <div class="model-list">
+              <a href="GShO/lebedki/lebedka_1LVM.html"
+                ><span class="model-page"
+                  >Лебедка вспомогательная многофункциональная 1ЛВМ</span
+                ></a
+              >
+              <a href="GShO/lebedki/lebedka_LVM-25.html"
+                ><span class="model-page"
+                  >Лебедка вспомогательная маневровая ЛВМ-25</span
+                ></a
+              >
+              <a href="GShO/lebedki/lebedka_1LGKNM.html"
+                ><span class="model-page">Лебедка 1ЛГКНМ</span></a
+              >
+
+              <a href="GShO/lebedki/lebedka_1LV-09.html"
+                ><span class="model-page">Лебедка 1ЛВ-09</span></a
+              >
+              <a href="GShO/lebedki/lebedka_LPAP.html"
+                ><span class="model-page"
+                  >Лебедка проходческая передвижная ЛПЭП</span
+                ></a
+              >
+              <a href="GShO/lebedki/lebedka_LV45.html"
+                ><span class="model-page">Лебедка ЛВ45</span></a
+              >
+              <a href="GShO/lebedki/lebedka_LVU-25.html"
+                ><span class="model-page">Лебедка ЛВУ25</span></a
+              >
+              <a href="GShO/lebedki/lebedka_manevr_LM-71bezmekhan.html"
+                ><span class="model-page"
+                  >Лебедка маневровая ЛМ-71 без механизма</span
+                ></a
+              >
+              <a href="GShO/lebedki/lebedka_manevr_LM-71mekhan.html"
+                ><span class="model-page"
+                  >Лебедка маневровая ЛМ-71 с механизмом</span
+                ></a
+              >
+              <a href="GShO/lebedki/lebedka_manevr_LM-140bezmekhan.html"
+                ><span class="model-page"
+                  >Лебедка маневровая ЛМ-140 без механизма</span
+                ></a
+              >
+              <a href="GShO/lebedki/lebedka_manevr_LM-140mekhan.html"
+                ><span class="model-page"
+                  >Лебедка маневровая ЛМ-140 с механизмом</span
+                ></a
+              >
+              <a href="GShO/lebedki/lebedka_manevr_LM.html"
+                ><span class="model-page">Лебедка маневровая ЛМ</span></a
+              >
+              <a href="GShO/lebedki/lebedka_montazhnaja_LMT-300.html"
+                ><span class="model-page">Лебедка монтажная ЛМТ-300</span></a
+              >
+              <a href="GShO/lebedki/lebedka_posadochnaja_LP-130.html"
+                ><span class="model-page">Лебедка посадочная ЛП-130</span></a
+              >
+              <a href="GShO/lebedki/lebedka_posadochnaja_LPK-10B.html"
+                ><span class="model-page">Лебедка посадочная ЛПК-10Б</span></a
+              >
+              <a href="GShO/lebedki/lebedka_posadochnaja_LPT-71.html"
+                ><span class="model-page">Лебедка посадочная ЛПТ-71</span></a
+              >
+              <a href="GShO/lebedki/lebedka_predohranit_3LP.html"
+                ><span class="model-page"
+                  >Лебёдка предохранительная ЗЛП</span
+                ></a
+              >
+              <a href="GShO/lebedki/lebedka_shaht_mnogofunktion_LSHM.html"
+                ><span class="model-page"
+                  >Лебедка шахтная многофункциональная ЛШМ</span
+                ></a
+              >
+              <a href="GShO/lebedki/lebedka_shaht_pnevmat_LP.html"
+                ><span class="model-page"
+                  >Лебедка шахтная пневматическая ЛП</span
+                ></a
+              >
+              <a href="GShO/lebedki/lebedka_shaht_vspomogat_1LShW-01.html"
+                ><span class="model-page"
+                  >Лебедка шахтная вспомогательная 1ЛШВ-01</span
+                ></a
+              >
+              <a href="GShO/lebedki/lebedka_shaht_vspomogat_LSHW-25U.html"
+                ><span class="model-page"
+                  >Лебедка шахтная вспомогательная ЛШВ-25У</span
+                ></a
+              >
+              <a href="GShO/lebedki/lebedka_shaht_vspomogat_SHVA-2000.html"
+                ><span class="model-page"
+                  >Лебедка шахтная вспомогательная ШВА-2000</span
+                ></a
+              >
+              <a
+                href="GShO/lebedki/lebedka_shaht_vspomogat_SHVA-18000_0,25P.html"
+                ><span class="model-page"
+                  >Лебедка шахтная вспомогательная ШВА-18000×0,25П</span
+                ></a
+              >
+              <a href="GShO/lebedki/lebedka_skrepper_2baraban_LSU.html"
+                ><span class="model-page"
+                  >Лебедки скреперные двухбарабанные ЛСУ</span
+                ></a
+              >
+              <a href="GShO/lebedki/lebedka_skrepper_30LSU-02S.html"
+                ><span class="model-page">Лебедка скреперная 30ЛСУ-02С</span></a
+              >
+              <a href="GShO/lebedki/lebedka_skrepper_55LSU-2S.html"
+                ><span class="model-page">Лебедка скреперная 55ЛСУ-2С</span></a
+              >
+            </div>
+          </details>
+          <details>
+            <summary class="sub-charter">Вентиляторы</summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+          <details>
+            <summary class="sub-charter">Насосы</summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+        </details>
+
+        <details>
+          <summary>Запчасти к горно-шахтному оборудованию</summary>
+
+          <details>
+            <summary class="sub-charter">Запчасти к лебёдкам</summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+          <details>
+            <summary class="sub-charter">Запчасти к вентиляторам</summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+          <details>
+            <summary class="sub-charter">Запчасти к насосам</summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+        </details>
+
+        <details>
+          <summary>Проходческое оборудование</summary>
+          <details>
+            <summary class="sub-charter">Анкероустановщики</summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+          <details>
+            <summary class="sub-charter">Перфораторы</summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+          <details>
+            <summary class="sub-charter">Буровое оборудование</summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+          <details>
+            <summary class="sub-charter">Скребковые конвейера</summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+          <details>
+            <summary class="sub-charter">Проходческие машины</summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+        </details>
+
+        <details>
+          <summary>Запчасти к проходческому оборудованию</summary>
+          <details>
+            <summary class="sub-charter">Запчасти к анкероустановщикам</summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+          <details>
+            <summary class="sub-charter">Запчасти к перфораторам</summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+          <details>
+            <summary class="sub-charter">Запчасти к буровым машинам</summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+          <details>
+            <summary class="sub-charter">
+              Запчасти к скребковым конвейерам
+            </summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+          <details>
+            <summary class="sub-charter">
+              Запчасти к проходческим машинам
+            </summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+        </details>
+
+        <details>
+          <summary>Материалы для ведения проходки</summary>
+          <details>
+            <summary class="sub-charter">Анкера</summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+          <details>
+            <summary class="sub-charter">Канатные анкера</summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+          <details>
+            <summary class="sub-charter">Полимерные ампулы</summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+          <details>
+            <summary class="sub-charter">Минеральные ампулы</summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+          <details>
+            <summary class="sub-charter">Резцы, коронки</summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+        </details>
+
+        <details>
+          <summary>Крепления для горных выработок</summary>
+          <details>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+        </details>
+
+        <details>
+          <summary>Запчасти к обогатительному оборудованию</summary>
+          <details>
+            <summary class="sub-charter">Запчасти к дробилкам</summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+        </details>
+
+        <details>
+          <summary>
+            Осветительное оборудование для промышленных объектов
+          </summary>
+
+          <details>
+            <summary class="sub-charter">Типы светильников</summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+        </details>
+
+        <details>
+          <summary>Аутсорсинг закупочных работ</summary>
+          <details>
+            <summary class="sub-charter">Ваш отдел закупок заменим мы</summary>
+            <div class="model-list">
+              <a href=""><span class="model-page">test</span></a>
+            </div>
+          </details>
+        </details>
+      </div>
+    </main>
+    <footer>
+      <div class="footer__box">
+        <div class="footer-left">
+          <div id="Контакты" class="footer__logo">
+            <div class="footer-logo-img"></div>
+            <span class="footer-left-title">АВЕГА</span>
           </div>
-        </form>
+
+          <div class="account__cont">
+            <h3 class="contacts__title">Контакты</h3>
+            <p class="account__info">
+              ООО "АВЕГА"" <br />ОГРН 1037739527077 <br />ИНН 7725038124<br />ФАКБ
+              "РОССИЙСКИЙ КАПИТАЛ" (ПАО) РОСТОВСКИЙ<br />БИК 046015222<br />к/с
+              30101810200000000222 в ОТДЕЛЕНИИ РОСТОВ-НА-ДОНУ<br />№
+              40702810712020000248<br />346500, Ростовская область,<br />
+              г. Шахты, пр-кт Пушкина, 29-А, оф. 402<br />+7-000-123-45-67
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <h2 class="footer-right__title">
+            Возникли трудности?<br />Заполните форму и с вами свяжутся для
+            консультации
+          </h2>
+          <form id="contact-form" method="post" class="form-request flex">
+            <label class="persons-data">
+              <!--<span class="visually-hidden">Фамилия, имя и отчество</span>-->
+              <input
+                class="persons__name"
+                type="text"
+                name="user_name"
+                data-validate-field="name"
+                data-validate-rules="name"
+                placeholder="Ваше имя*"
+                required
+              />
+              <!--<span class="visually-hidden">Введите электронную почту</span>-->
+              <input
+                class="persons__email"
+                type="email"
+                name="user_email"
+                data-validate-field="email"
+                placeholder="Ваша почта*"
+                required
+              />
+              <!--<span class="visually-hidden">Введите номер телефона</span>-->
+              <input
+                class="persons__tel"
+                type="tel"
+                name="contact_number"
+                data-validate-field="tel"
+                data-validate-rules="phone"
+                placeholder="Ваш телефон*"
+                required
+              />
+            </label>
+            <div class="footer-right__request">
+              <button
+                type="submit"
+                value="Send"
+                aria-label="кнопка отправить данные"
+                class="request__btn btn"
+              >
+                <span class="request-btn__text">Связаться с нами</span>
+              </button>
+              <label class="checkbox-place">
+                <span class="checkbox__text"
+                  >Мы обрабатываем персональные данные посетителей нашего сайта
+                  в соответствии с официальной политикой</span
+                >
+              </label>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+    <script src="just-validate.min.js"></script>
+    <script src="Inputmask-5.x/Inputmask-5.x/dist/inputmask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script>
+      var selector = document.querySelector("input[type='tel']");
+      var im = new Inputmask("+7 (999) -999-99-99");
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="index.js"></script>
-  <script src="just-validate.min.js"></script>
-  <script src="Inputmask-5.x/Inputmask-5.x/dist/inputmask.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
-  <script>
-    var selector = document.querySelector("input[type='tel']");
-    var im = new Inputmask("+7 (999) -999-99-99");
+      im.mask(selector);
 
-    im.mask(selector);
-
-    new JustValidate(".form", {
-      rules: {
-        name: {
-          required: true,
-          minLength: 2,
-          maxLength: 10,
-        },
-        tel: {
-          required: true,
-          function: (name, value) => {
-            const phone = selector.Inputmask.unmaskedvalue();
-            return Number(phone) && phone.length === 10;
+      new JustValidate(".form", {
+        rules: {
+          name: {
+            required: true,
+            minLength: 2,
+            maxLength: 10,
+          },
+          tel: {
+            required: true,
+            function: (name, value) => {
+              const phone = selector.Inputmask.unmaskedvalue();
+              return Number(phone) && phone.length === 10;
+            },
+          },
+          email: {
+            required: true,
+            email: true,
           },
         },
-        email: {
-          required: true,
-          email: true,
-        },
-      },
 
-      messages: {
-        email: {
-          required: "Вы не ввели e-mail",
+        messages: {
+          email: {
+            required: "Вы не ввели e-mail",
+          },
+          tel: {
+            required: "Вы не ввели телефон",
+          },
+          name: {
+            required: "Вы не ввели имя?",
+          },
         },
-        tel: {
-          required: "Вы не ввели телефон",
-        },
-        name: {
-          required: "Вы не ввели имя?",
-        },
-      },
-      colorWrong: "#FF5C00",
-    });
-  </script>
-</body>
-
+        colorWrong: "#FF5C00",
+      });
+    </script>
+  </body>
 </html>
